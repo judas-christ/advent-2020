@@ -1,0 +1,7 @@
+FROM ocaml/opam:ubuntu-ocaml-4.11
+
+RUN sudo apt-get install libsigsegv2 m4
+RUN opam install ocaml-lsp-server
+RUN opam install merlin
+RUN opam install ocamlformat
+RUN eval $(opam env)
